@@ -1,0 +1,202 @@
+body{
+  margin: 40px 0;
+  min-height: 100vh;
+  font-size: 12px;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-family: 'Kumbh Sans', sans-serif;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+hr{
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+
+.accordionWrapper{
+  display: grid;
+  grid-template-rows: 150px auto;
+  margin-top: 3rem;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 300px;
+  min-height: 500px;
+  box-shadow: 0 20px 25px -10px hsl(237, 12%, 33%);
+  max-width: 1000px;
+}
+
+.accordionItembox{
+float: right;
+display: block;
+padding: 10px;
+}
+
+
+.template-image{
+  background-image: url("images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.illustration{
+  height: 100%;
+  float: left;
+  display: block;
+}
+
+.illustration-mobile{
+  position: relative;
+  bottom: 105px;
+}
+
+.illustration-desktop{
+  display: none;
+}
+
+.illustration-box{
+   display: none;
+}
+
+.heading{
+  text-align: center;
+}
+
+.container{
+  margin: -2.5rem 1.5rem 2rem;
+}
+
+.accordionItemHeading{
+  width: 100%;
+  background-color:#fff;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 5px 0;
+  color: hsl(237, 12%, 33%);
+}
+
+.arrow{
+  float: right;
+}
+
+.accordionItemContent {
+  display: none;
+  overflow: hidden;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: hsl(240, 6%, 50%);
+  line-height: 1.5;
+}
+
+.close .accordionItemContent {
+  height: 0px;
+  transition: height 1s ease-out;
+  -webkit-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+  display: block;
+}
+
+.open .accordionItemContent {
+  display:block;
+    -webkit-transform: scaleY(1);
+	-o-transform: scaleY(1);
+	-ms-transform: scaleY(1);
+	transform: scaleY(1);
+    -webkit-transform-origin: top;
+	-o-transform-origin: top;
+	-ms-transform-origin: top;
+	transform-origin: top;
+
+	-webkit-transition: -webkit-transform 0.4s ease-out;
+	-o-transition: -o-transform 0.4s ease;
+	-ms-transition: -ms-transform 0.4s ease;
+	transition: transform 0.4s ease;
+        box-sizing: border-box;
+}
+
+.open .accordionItemHeading{
+  margin:0px;
+
+}
+
+
+.accordionItemHeading:hover{
+  color: hsl(14, 88%, 65%);
+}
+
+.afterClick{
+  font-weight: 700;
+  color: #000;
+}
+
+.attribution { font-size: 9px; text-align: center; color: #eee; margin-top: 5px;}
+.attribution a { color: #fff; font-size: 11px;}
+.attribution a:hover {color:hsl(14, 88%, 65%);}
+
+@media only screen and (min-width: 830px){
+
+  body{
+    margin:0 5%;
+  }
+
+  .accordionWrapper{
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 2fr;
+    width: 100%;
+    min-width: 550px;
+    max-width: 900px;
+  }
+
+  .accordionWrapper .template-image{
+    position: relative;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 115% -18rem;
+  }
+
+  .illustration{
+    overflow: hidden;
+  }
+
+  .illustration-desktop{
+    display: block;
+    position: relative;
+    right: 15%;
+    top: 4rem;
+
+  }
+
+  .illustration-mobile{
+    display: none;
+  }
+
+  .illustration-box{
+    display: block;
+    position: absolute;
+    top: 13rem;
+    left: -20%;
+
+  }
+
+  .container{
+    margin: 2.5rem 1.5rem 2rem;
+  }
+
+  .heading{
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .attribution{
+    font-size: 11px;
+  }
+  .attribution a{
+    font-size: 14px;
+  }
+
+}
