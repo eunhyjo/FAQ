@@ -31,7 +31,7 @@ hr{
 .accordionItembox{
 float: right;
 display: block;
-padding: 10px;
+padding: 40px 30px;
 }
 
 
@@ -76,6 +76,7 @@ padding: 10px;
   transition: 0.2s;
   padding: 5px 0;
   color: hsl(237, 12%, 33%);
+  font-size: 14px;
 }
 
 .arrow{
@@ -124,6 +125,11 @@ padding: 10px;
 
 }
 
+/* arrow down and up */
+.close .accordionItemHeading .arrow {
+  transform: rotate(180deg);
+} 
+
 
 .accordionItemHeading:hover{
   color: hsl(14, 88%, 65%);
@@ -137,6 +143,8 @@ padding: 10px;
 .attribution { font-size: 9px; text-align: center; color: #eee; margin-top: 5px;}
 .attribution a { color: #fff; font-size: 11px;}
 .attribution a:hover {color:hsl(14, 88%, 65%);}
+
+
 
 @media only screen and (min-width: 830px){
 
